@@ -107,6 +107,8 @@ def main():
             address = place_details['address']
             phone_number = place_details['phone_number']
             website = place_details['website']
+            if website.contains('?'):
+                website = website.split('?')[0]
 
             if phone_number and website:
                 data = [name, website, address, phone_number]
