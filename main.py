@@ -107,7 +107,7 @@ def main():
             address = place_details['address']
             phone_number = place_details['phone_number']
             website = place_details['website']
-            if website.contains('?'):
+            if website and '?' in website:
                 website = website.split('?')[0]
 
             if phone_number and website:
